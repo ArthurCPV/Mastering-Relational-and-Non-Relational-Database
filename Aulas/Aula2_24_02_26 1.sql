@@ -1,29 +1,29 @@
-Aula 1 - 10/02/26
+-- Aula 1 - 10/02/26
 
-Comandos de ambiente
-Habilitando saída de dados
+-- Comandos de ambiente
+-- Habilitando saída de dados
 set serveroutput on
 
-Desabilitando resposta de variaveis
+-- Desabilitando resposta de variaveis
 set verify off
 
-Estrutura de um bloco anonimo
+-- Estrutura de um bloco anonimo
 
 declare
-    area de variaveis
-    opcional
+    -- area de variaveis
+    -- opcional
     begin
-        processamento, decisão, looping
-        saida de dados...
-        corpo do programa
-        obrigatorio
-    exception
-        tratamento de erros
-        opcional
+        -- processamento, decisão, looping
+        -- saida de dados...
+        -- corpo do programa
+        -- obrigatorio
+    exception;
+        -- tratamento de erros
+        -- opcional
     end;
 
 
-1o programa
+-- 1o programa
 
 begin
     dbms_output.put_line('Oi');
@@ -42,7 +42,7 @@ begin
     dbms_output.put_line('Isso e FIAP');
     end;
 
-Variaveis de memoria
+-- Variaveis de memoria
 
 Declare
     v_n1 number(4,2) := 10;
@@ -76,7 +76,7 @@ Declare
         dbms_output.put_line('A soma dos valores é: '||v_n3);
     end;
     
-Variaveis de substituição e herança de estrutura
+-- Variaveis de substituição e herança de estrutura
 
 Declare
     v_n1 number(8,2) := &valor1;
@@ -87,7 +87,7 @@ Declare
     dbms_output.put_line('A soma dos valores é: '||v_n3);
     end;
     
-Criar um programa que apresente a média aritmética de 4 números reais
+-- Criar um programa que apresente a média aritmética de 4 números reais
 
 declare
 -- declarando variaveis
@@ -102,10 +102,10 @@ declare
         dbms_output.put_line(' A média vale: '||media);
     end;
 
-Aula 2 - 24/02/26
+-- Aula 2 - 24/02/26
 
-Criar um bloco PL-SQL para calcular o valor do novo 
-salário mínimo que deverá ser de 25% em cima do atual, que é de R$???
+-- Criar um bloco PL-SQL para calcular o valor do novo 
+-- salário mínimo que deverá ser de 25% em cima do atual, que é de R$???
 
 declare
     v_sal number(10,2) := &salario;
@@ -115,6 +115,7 @@ begin
     dbms_output.put_line('Salario Minimo com + 25 % R$ '||v_sal_final);
 end;
 
+/*
 Criar um bloco PL-SQL para calcular o valor de cada 
 parcela de uma compra de um carro, nas seguintes condições:
 - Parcelas para aquisição em 6 pagamentos. 
@@ -129,6 +130,7 @@ pagamento, com o Valor de aquisição de 10.000.
 A – Pagamento em 6 parcelas: 10%. 
 B – Pagamento em 12 parcelas: 15%. 
 C – Pagamento em 18 parcelas: 20%.
+*/
 
 declare
     v_total number(10,2) := 10000;

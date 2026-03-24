@@ -100,15 +100,15 @@ begin
     end if;
 end;
  
- 
-// Crie um bloco PL/SQL que avalie a idade de uma pessoa e determine se ela é criança, adolescente, adulto ou idoso.
-// Considere as faixas etárias:
+/*
+Crie um bloco PL/SQL que avalie a idade de uma pessoa e determine se ela é criança, adolescente, adulto ou idoso.
+Considere as faixas etárias:
 
-// -Criança: 0 a 12 anos
-// -Adolescente: 13 a 17 anos
-// -Adulto: 18 a 64 anos
-// -Idoso: 65 anos ou mais
-
+-Criança: 0 a 12 anos
+-Adolescente: 13 a 17 anos
+-Adulto: 18 a 64 anos
+-Idoso: 65 anos ou mais
+*/
 
 -- R:
 
