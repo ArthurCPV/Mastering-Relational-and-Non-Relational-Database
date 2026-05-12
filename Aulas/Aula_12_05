@@ -1,0 +1,31 @@
+set SERVEROUTPUT ON;
+set VERIFY off;
+ 
+create or REPLACE PROCEDURE soma (
+    P_1 in NUMBER,
+    P_2 IN NUMBER)
+    IS
+    P_T NUMBER(8,2);
+    BEGIN
+        P_T := P_1 + P_2;
+        DBMS_OUTPUT.PUT_LINE(P_1 || '+' || P_2 || '=' || P_T);
+END SOMA;
+ 
+EXEC SOMA(2,2);
+
+///
+
+insert into tables aluno values(1, 'art');
+insert into tables aluno values(2, 'brt');
+insert into tables aluno values(3, 'crt');
+
+select * from aluno;
+create or replace procedure proc_nome_aluno (p_ra in char)
+is
+v_nome varchar(50);
+begin
+select nome into v_nome from aluno where ra = p_ra;
+dbms_output.put_line (v_nome);
+end proc_nome_aluno;
+
+exec proc_nome_aluno(3);
